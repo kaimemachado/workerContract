@@ -42,6 +42,13 @@ public class Program {
             worker.addContract(new HourContract(dataContrato, valuePHour, duration));
         }
 
+        System.out.println("Enter month year to calculate income (MM/YYYY): ");
+        String calculateDate = sc.next();
+        String[] monthYear = calculateDate.split("/");
+        Double totalValue = worker.income(Integer.valueOf(monthYear[0]), Integer.valueOf(monthYear[1]));
+        System.out.println("Name: " + worker.getName());
+        System.out.println("Department: " + worker.getDepartment().getName());
+        System.out.println("Income for " + calculateDate + ": " + totalValue);
 
 
 

@@ -18,7 +18,7 @@ public class Worker {
         contracts.remove(contract);
     }
 
-    public Double income (Integer year, Integer month) {
+    public Double income (Integer month, Integer year ) {
         double sum = baseSalary;
         for(HourContract c: contracts) {
             if(c.getDate().getMonthValue() == month && c.getDate().getYear() == year) {
@@ -27,8 +27,6 @@ public class Worker {
         }
         return sum;
     }
-
-
     //Construtor
     public Worker() {
         this.contracts = new ArrayList<>();
